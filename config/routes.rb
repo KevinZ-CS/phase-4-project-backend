@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :users, only: [:show] do
   # get '/me', to: 'users#show' do
       resources :create_games, only: [:create]
+      resources :reviews
   end
 
   post '/login', to: 'sessions#create'
@@ -16,5 +17,7 @@ Rails.application.routes.draw do
 
   get '/', to: 'games#index'
   resources :games, only: [:show]
+
+
 
 end
