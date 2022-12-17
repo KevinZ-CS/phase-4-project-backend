@@ -9,7 +9,7 @@ class GamesController < ApplicationController
 
     def show
         game = Game.find(params[:id])
-        render json: game, status: :ok
+        render json: game, serializer: GamesWithReviewsSerializer, status: :ok
     end
 
     private
