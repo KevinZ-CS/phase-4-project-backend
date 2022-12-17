@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::API
   include ActionController::Cookies
 
-rescue_from ActiveRecord::RecordInvalid, :render_unprocessable_entity_response
+rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
 
 before_action :authorize
 #putting before acction in application controller will run authorize for every controller inheriting from application controller
