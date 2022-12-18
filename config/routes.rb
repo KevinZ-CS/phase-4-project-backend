@@ -6,11 +6,9 @@ Rails.application.routes.draw do
 
   post '/signup', to: 'users#create'
 
-  resources :users, only: [:show] do
-  # get '/me', to: 'users#show' do
-      resources :create_games, only: [:create]
-      resources :reviews
-  end
+  # resources :users, only: [:show] this route does not work for some reason but the one below it does for staying logged in
+ 
+  get "/me", to: "users#show"
 
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy' 
@@ -18,6 +16,7 @@ Rails.application.routes.draw do
   # get '/', to: 'games#index'
   resources :games, only: [:index, :show]
 
+  resources :reviews, only: [:create]
 
 
 end

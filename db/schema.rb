@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2022_12_16_001426) do
   create_table "reviews", force: :cascade do |t|
     t.integer "score"
     t.string "comment"
+    t.string "username", null: false
     t.bigint "game_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
