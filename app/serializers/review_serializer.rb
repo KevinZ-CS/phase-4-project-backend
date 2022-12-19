@@ -5,5 +5,6 @@ class ReviewSerializer < ActiveModel::Serializer
   def username
     self.object.user.username
   end
+  #created a custom method. self will return a ReviewSerializer instance with an object property that contains a Review instance
 
 end
