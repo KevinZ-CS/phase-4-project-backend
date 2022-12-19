@@ -4,12 +4,12 @@ class GamesController < ApplicationController
 
     def index
         games = Game.all
-        render json: games, status: :ok
+        render json: games, each_serializer: CustomGameSerializer, status: :ok
     end
 
     def show
         game = Game.find(params[:id])
-        render json: game, serializer: GamesWithReviewsSerializer, status: :ok
+        render json: game, status: :ok
     end
 
     private

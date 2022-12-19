@@ -8,6 +8,6 @@ class ReviewsController < ApplicationController
     private
 
     def review_params
-        params.permit(:score, :comment, :game_id, :user_id, :username)
+        params.permit(:score, :comment, :game_id, :user_id)
     end
 end
