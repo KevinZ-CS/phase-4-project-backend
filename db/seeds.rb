@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "🌱 Seeding data..."
 
-Game.create(title: "Breath of the Wild", platform: "Switch", genre: "Action-adventure", img_url: 'https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/en_US/games/switch/t/the-legend-of-zelda-breath-of-the-wild-switch/hero', price: 60)
-Game.create(title: "Final Fantasy VII", platform: "Playstation", genre: "RPG", img_url: 'https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_2.625/c_scale,w_400/ncom/en_US/games/switch/f/final-fantasy-vii-switch/hero', price: 60)
-Game.create(title: "Mario Kart", platform: "Switch", genre: "Racing", img_url: 'https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/en_US/games/switch/m/mario-kart-8-deluxe-switch/hero', price: 60)
+Game.create(title: "Breath of the Wild", platform: "Switch", genre: "Action-adventure", img_url: 'https://www.gamespot.com/a/uploads/scale_landscape/1585/15855271/3389187-breath-of-the-wild-walkthrough.jpg', price: 60)
+Game.create(title: "Final Fantasy VII", platform: "Playstation", genre: "RPG", img_url: 'https://images.nintendolife.com/f344487b844dd/final-fantasy-vii-cover.cover_large.jpg', price: 60)
+Game.create(title: "Mario Kart", platform: "Switch", genre: "Racing", img_url: 'https://www.mobygames.com/images/covers/l/496567-mario-kart-8-deluxe-nintendo-switch-front-cover.jpg', price: 60)
 Game.create(title: "Pokemon Violet", platform: "Switch", genre: "RPG", img_url: 'https://assets-prd.ignimgs.com/2022/08/03/pokemon-violet-1659542326365.jpg', price: 60)
 Game.create(title: "Pokemon Scarlet", platform: "Switch", genre: "RPG", img_url: 'https://assets-prd.ignimgs.com/2022/08/03/pokemon-scarlet-1659542292648.jpg', price: 60)
 
