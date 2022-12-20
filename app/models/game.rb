@@ -6,8 +6,8 @@ class Game < ApplicationRecord
     PLATFORMS = ['Switch', 'Playstation', 'Xbox', 'PC']
 
     validates :title, presence: true
-    validates :genre, presence: true, inclusion: { in: GENRES, message: " needs to be one of these: #{GENRES} " } 
-    validates :platform, presence: true, inclusion: { in: PLATFORMS, message: " needs to be one of these: #{PLATFORMS} "}
-    validates :img_url, presence: true
+    validates :genre, presence: true, inclusion: { in: GENRES, message: " needs to be one of: #{GENRES.join(', ')} " } 
+    validates :platform, presence: true, inclusion: { in: PLATFORMS, message: " needs to be one of: #{PLATFORMS.join(', ')} "}
+    validates :img_url, presence: true, format: {with: /\.(png|jpg)\Z/i}
     validates :price, presence: true, numericality: { greater_than: 0 }
 end
