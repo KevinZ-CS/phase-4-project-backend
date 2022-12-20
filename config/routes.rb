@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   # get '/', to: 'games#index'
   resources :games, only: [:index, :show, :create]
 
-  resources :reviews, only: [:create]
+  resources :reviews, except: [:index]
 
 
 end
