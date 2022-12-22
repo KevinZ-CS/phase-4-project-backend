@@ -13,9 +13,11 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy' 
 
-  resources :games, only: [:index, :show, :create]
+  resources :games, only: [:index, :show, :create] do
+    resources :reviews, only: [:update, :destroy, :create, :show]
+  end
 
-  resources :reviews, except: [:index]
+  # resources :reviews, except: [:index, :create, :update, :destroy, :show]
 
 
 end
